@@ -9,6 +9,7 @@ Ext.require([
     'Ext.layout.container.Border',
     'Ext.menu.Menu',
     'Ext.form.Label',
+    'belajar.form.RoleForm',
     'belajar.form.UserForm',
     'belajar.panel.CenterPanel',
     'belajar.panel.MainPanel'

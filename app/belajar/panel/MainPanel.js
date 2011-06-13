@@ -33,7 +33,12 @@ Ext.define('belajar.panel.MainPanel', {
 						},
 						screenType : 'belajar.form.UserForm'
 					}, {
-						text : 'Role'
+						text : 'Role', 
+						scope : this,
+						handler : function(item){
+							Ext.getCmp('centerpanel').displayScreen(item.screenType);
+						},
+						screenType : 'belajar.form.RoleForm'
 					}, {
 						text : 'Permission'
 					} ]
