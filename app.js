@@ -19,7 +19,7 @@ Ext.onReady(function() {
         plain: true,
         closable: false,
         items: [
-            new belajar.panel.MainPanel()
+            {xtype : 'belajar.panel.MainPanel'}
         ]
     });
     win.show();

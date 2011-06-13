@@ -17,7 +17,7 @@ Ext.onReady(function() {
         plain: true,
         closable: false,
         items: [
-            new belajar.panel.LoginPanel()
+            {xtype : 'belajar.panel.LoginPanel'}
         ]
     });
     win.show();

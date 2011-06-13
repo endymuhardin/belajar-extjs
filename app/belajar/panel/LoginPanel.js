@@ -1,6 +1,6 @@
 Ext.define('belajar.panel.LoginPanel', {
-    extend: 'Ext.form.Panel',
-    
+    extend : 'Ext.form.Panel',
+    alias : 'widget.belajar.panel.LoginPanel',
     id: 'loginForm',
     
     frame: true, 

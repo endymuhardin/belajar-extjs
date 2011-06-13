@@ -1,5 +1,6 @@
 Ext.define('belajar.panel.MainPanel', {
 	extend : 'Ext.panel.Panel',
+	alias : 'widget.belajar.panel.MainPanel',
 	frame : true,
 	layout : 'border',
 
