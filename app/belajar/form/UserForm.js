@@ -11,7 +11,8 @@ Ext.define('belajar.form.UserForm', {
         this.items = [
             {
                 xtype: 'textfield',
-                fieldLabel: 'Username'
+                fieldLabel: 'Username',
+                allowBlank:false
             },
             {
                 xtype: 'textfield',
@@ -29,7 +30,8 @@ Ext.define('belajar.form.UserForm', {
             items: [
                 {
                     xtype: 'button',
-                    text: 'Save'
+                    text: 'Save', 
+                    handler : this.simpanUser
                 },
                 {
                     xtype: 'button',
@@ -38,5 +40,19 @@ Ext.define('belajar.form.UserForm', {
             ]
         };
         belajar.form.UserForm.superclass.initComponent.call(this);
+    },
+    
+    simpanUser: function(){
+    	var form = Ext.getCmp('belajar.form.UserForm');
+    	if(form.getForm().isValid()){
+    		Ext.MessageBox.alert(
+                'TODO','implement form save'
+            );
+    	} else {
+    		Ext.MessageBox.alert(
+                'Error!',
+                'Please check again'
+            );	
+    	}
     }
 });
