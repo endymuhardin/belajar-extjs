@@ -25,7 +25,6 @@ Ext.define('belajar.panel.CenterPanel', {
 			this.setActiveTab(screen);
 		} else {
 			this.add({
-				id : screenType,
 				xtype : screenType, 
 				closable : true
 			}).show();

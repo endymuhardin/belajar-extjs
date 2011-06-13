@@ -1,6 +1,7 @@
 Ext.define('belajar.form.RoleForm', {
 	extend : 'Ext.form.FormPanel', 
 	alias : 'widget.belajar.form.RoleForm',
+	id: 'belajar.form.RoleForm',
 	title: 'Role Form',
     width: 600,
     height: 250,

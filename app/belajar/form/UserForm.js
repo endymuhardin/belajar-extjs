@@ -1,6 +1,7 @@
 Ext.define('belajar.form.UserForm', {
 	extend : 'Ext.form.FormPanel', 
 	alias : 'widget.belajar.form.UserForm',
+	id: 'belajar.form.UserForm',
 	title: 'User Form',
     width: 600,
     height: 250,
