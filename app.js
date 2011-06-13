@@ -8,6 +8,7 @@ Ext.require([
     'Ext.container.Viewport',
     'Ext.layout.container.Border',
     'Ext.menu.Menu',
+    'Ext.form.Label',
     'belajar.panel.CenterPanel',
     'belajar.panel.MainPanel'
 ]);

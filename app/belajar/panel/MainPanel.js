@@ -3,6 +3,10 @@ Ext.define('belajar.panel.MainPanel', {
 	alias : 'widget.belajar.panel.MainPanel',
 	frame : true,
 	layout : 'border',
+	
+	initComponent : function() {
+    	belajar.panel.MainPanel.superclass.initComponent.apply(this, arguments);
+    }, 
 
 	items : [ {
 		xtype : 'toolbar',
@@ -25,7 +29,12 @@ Ext.define('belajar.panel.MainPanel', {
 				xtype : 'menu',
 				plain : true,
 				items : [ {
-					text : 'User'
+					text : 'User', 
+					scope : this,
+					handler : function(item){
+						Ext.getCmp('centerpanel').displayScreen(item.text);
+					},
+					screenType : 'belajar.panel.UserPanel'
 				}, {
 					text : 'Role'
 				}, {

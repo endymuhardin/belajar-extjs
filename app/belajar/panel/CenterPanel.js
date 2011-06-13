@@ -1,6 +1,7 @@
 Ext.define('belajar.panel.CenterPanel', {
 	extend : 'Ext.tab.Panel',
 	alias : 'widget.belajar.panel.CenterPanel',
+	id : 'centerpanel',
 	layout : {
 		type : 'hbox',
 		align : 'stretch'
@@ -12,6 +13,14 @@ Ext.define('belajar.panel.CenterPanel', {
 			bodyPadding : 10,
 			html : 'Selamat Datang di Aplikasi Belajar'
 		} 
-	]
+	], 
+	
+	displayScreen : function(title) {
+		this.add({
+			title : title, 
+			closable : true, 
+			html : 'test content'
+		}).show();
+	}
 	
 });
