@@ -22,9 +22,9 @@ Ext.define('belajar.panel.LoginPanel', {
             tag:'div', 
             style: 'text-align:center',
             children:[{
-                tag:'img'
-                ,qtip:'ArtiVisi Intermedia'
-                ,src:'./resources/img/artivisi.png'
+                tag:'img',
+                qtip:'ArtiVisi Intermedia',
+                src:'./resources/img/artivisi.png'
             }]
         }
     },{
