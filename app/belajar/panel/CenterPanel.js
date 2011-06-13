@@ -20,10 +20,16 @@ Ext.define('belajar.panel.CenterPanel', {
 	
 	
 	displayScreen : function(screenType) {
-		this.add({
-			xtype : screenType, 
-			closable : true
-		}).show();
+		var screen = Ext.getCmp(screenType);
+		if(screen){
+			this.setActiveTab(screen);
+		} else {
+			this.add({
+				id : screenType,
+				xtype : screenType, 
+				closable : true
+			}).show();
+		}
 	}
 	
 });
