@@ -53,14 +53,7 @@ Ext.define('belajar.panel.MainPanel', {
 		} ]
 	}, {
 		id : 'centerpanel',
-		xtype : 'tabpanel',
-		region : 'center',
-		items : [ 
-	         {
-				title : 'Dashboard',
-				bodyPadding : 10,
-				html : 'Selamat Datang di Aplikasi Belajar'
-			} 
-		]
+		xtype : 'belajar.panel.CenterPanel',
+		region : 'center'
 	} ]
 });
