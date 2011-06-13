@@ -32,9 +32,9 @@ Ext.define('belajar.panel.MainPanel', {
 					text : 'User', 
 					scope : this,
 					handler : function(item){
-						Ext.getCmp('centerpanel').displayScreen(item.text);
+						Ext.getCmp('centerpanel').displayScreen(item.screenType);
 					},
-					screenType : 'belajar.panel.UserPanel'
+					screenType : 'belajar.form.UserForm'
 				}, {
 					text : 'Role'
 				}, {

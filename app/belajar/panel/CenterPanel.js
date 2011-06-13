@@ -15,11 +15,10 @@ Ext.define('belajar.panel.CenterPanel', {
 		} 
 	], 
 	
-	displayScreen : function(title) {
+	displayScreen : function(screenType) {
 		this.add({
-			title : title, 
-			closable : true, 
-			html : 'test content'
+			xtype : screenType, 
+			closable : true
 		}).show();
 	}
 	
