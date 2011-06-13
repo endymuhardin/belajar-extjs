@@ -6,14 +6,18 @@ Ext.define('belajar.panel.CenterPanel', {
 		type : 'hbox',
 		align : 'stretch'
 	},
-	
 	items : [ 
-         {
-			title : 'Dashboard',
-			bodyPadding : 10,
-			html : 'Selamat Datang di Aplikasi Belajar'
-		} 
-	], 
+	     {
+	    	 title : 'Dashboard',
+	    	 bodyPadding : 10,
+	    	 html : 'Selamat Datang di Aplikasi Belajar'
+	     } 
+     ], 
+	
+	initComponents: function(){
+		belajar.panel.CenterPanel.superclass.call(this);
+	}, 
+	
 	
 	displayScreen : function(screenType) {
 		this.add({
