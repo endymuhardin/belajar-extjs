@@ -42,7 +42,7 @@ Ext.define('belajar.panel.LoginPanel', {
     buttons: [{
         text: 'Login', 
         handler: function(){
-            Ext.getCmp('loginScreen').close();
+            window.location.href = 'main.html';
         }
     }]
 });
