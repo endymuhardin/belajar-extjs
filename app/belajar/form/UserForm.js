@@ -3,16 +3,18 @@ Ext.define('belajar.form.UserForm', {
 	alias : 'widget.belajar.form.UserForm',
 	id: 'belajar.form.UserForm',
 	title: 'User Form',
-    width: 600,
-    height: 250,
-    padding: 10,
     labelWidth: 200,
+    bodyStyle:'padding:10px 10px 0',
     initComponent: function() {
         this.items = [
             {
                 xtype: 'textfield',
                 fieldLabel: 'Username',
                 allowBlank:false
+            },
+            {
+                xtype: 'textfield',
+                fieldLabel: 'Email'
             },
             {
                 xtype: 'textfield',

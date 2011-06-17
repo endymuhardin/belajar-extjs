@@ -31,7 +31,7 @@ Ext.define('belajar.panel.MainPanel', {
 						handler : function(item){
 							Ext.getCmp('centerpanel').displayScreen(item.screenType);
 						},
-						screenType : 'belajar.form.UserForm'
+						screenType : 'belajar.panel.UserManagementPanel'
 					}, {
 						text : 'Role', 
 						scope : this,

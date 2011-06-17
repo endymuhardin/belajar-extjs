@@ -12,6 +12,7 @@ Ext.require([
     'belajar.model.UserModel',
     'belajar.form.RoleForm',
     'belajar.form.UserForm',
+    'belajar.panel.UserManagementPanel',
     'belajar.panel.CenterPanel',
     'belajar.panel.MainPanel'
 ]);
