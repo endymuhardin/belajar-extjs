@@ -9,8 +9,7 @@ Ext.define('belajar.panel.UserManagementPanel', {
             {
                 xtype: 'grid',
                 title: 'User List',
-                region: 'west',
-                width: 400,
+                region: 'center',
                 store: new Ext.data.Store({
                 	model: 'belajar.model.UserModel',
                 	data: [
@@ -35,26 +34,13 @@ Ext.define('belajar.panel.UserManagementPanel', {
             },
             {
                 xtype: 'belajar.form.UserForm',
-                region: 'center'
+                region: 'north',
+                height: 200
             }
         ];
         
         this.tbar = {
-            xtype: 'toolbar',
-            items: [
-                {
-                    xtype: 'button',
-                    text: 'Add'
-                },
-                {
-                    xtype: 'button',
-                    text: 'Edit'
-                },
-                {
-                    xtype: 'button',
-                    text: 'Delete'
-                }
-            ]
+            xtype: 'belajar.toolbar.CrudToolbar'
         };
         belajar.panel.UserManagementPanel.superclass.initComponent.call(this);
     }

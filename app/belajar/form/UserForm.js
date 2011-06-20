@@ -27,20 +27,6 @@ Ext.define('belajar.form.UserForm', {
                 inputType: 'password'
             }
         ];
-        this.fbar = {
-            xtype: 'toolbar',
-            items: [
-                {
-                    xtype: 'button',
-                    text: 'Save', 
-                    handler : this.simpanUser
-                },
-                {
-                    xtype: 'button',
-                    text: 'Cancel'
-                }
-            ]
-        };
         belajar.form.UserForm.superclass.initComponent.call(this);
     },
     
