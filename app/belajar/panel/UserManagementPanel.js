@@ -30,7 +30,11 @@ Ext.define('belajar.panel.UserManagementPanel', {
                         sortable: true,
                         width: 300
                     }
-                ]
+                ], 
+                listeners : {
+	            	scope: this, 
+	            	selectionChange: this.onUserRowClick
+	            }
             },
             {
                 xtype: 'belajar.form.UserForm',
@@ -63,5 +67,12 @@ Ext.define('belajar.panel.UserManagementPanel', {
     resetUserForm: function(){
     	Ext.getCmp('belajar.form.UserForm').getForm().reset();
     	Ext.getCmp('belajar.form.UserForm').disableUserForm();
+    }, 
+    
+    onUserRowClick: function(model, records){
+    	var selection = records[0];
+    	if(selection){
+    		Ext.getCmp('belajar.form.UserForm').loadRecord(selection);
+    	}
     }
 });

@@ -9,11 +9,13 @@ Ext.define('belajar.form.UserForm', {
         this.items = [
             {
                 xtype: 'textfield',
+                name: 'username',
                 fieldLabel: 'Username',
                 allowBlank:false
             },
             {
                 xtype: 'textfield',
+                name: 'email',
                 fieldLabel: 'Email'
             },
             {
