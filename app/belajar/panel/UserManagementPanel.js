@@ -7,30 +7,8 @@ Ext.define('belajar.panel.UserManagementPanel', {
     initComponent: function() {
         this.items = [
             {
-                xtype: 'grid',
-                title: 'User List',
+                xtype: 'belajar.grid.UserGrid',
                 region: 'center',
-                store: new Ext.data.Store({
-                	model: 'belajar.model.UserModel',
-                	data: [
-            	       {username: 'endy', email: 'endy.muhardin@gmail.com'},
-            	       {username: 'ifnu', email: 'ifnubima@gmail.com'}
-                	]
-                }),
-                columns: [
-                    {
-                        dataIndex: 'username',
-                        header: 'Username',
-                        sortable: true,
-                        width: 100
-                    },
-                    {
-                        dataIndex: 'email',
-                        header: 'Email',
-                        sortable: true,
-                        width: 300
-                    }
-                ], 
                 listeners : {
 	            	scope: this, 
 	            	selectionChange: this.onUserRowClick

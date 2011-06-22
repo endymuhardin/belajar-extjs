@@ -10,6 +10,7 @@ Ext.require([
     'Ext.menu.Menu',
     'Ext.form.Label',
     'belajar.toolbar.CrudToolbar',
+    'belajar.grid.UserGrid',
     'belajar.model.UserModel',
     'belajar.form.RoleForm',
     'belajar.form.UserForm',
