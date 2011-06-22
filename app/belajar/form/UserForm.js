@@ -28,7 +28,20 @@ Ext.define('belajar.form.UserForm', {
             }
         ];
         belajar.form.UserForm.superclass.initComponent.call(this);
+        this.disableUserForm();
     },
+    
+    enableUserForm: function(){
+    	this.getForm().getFields().each(function(f){
+    		f.setReadOnly(false);
+    	});
+    }, 
+    
+    disableUserForm: function(){
+    	this.getForm().getFields().each(function(f){
+    		f.setReadOnly(true);
+    	});
+    }, 
     
     simpanUser: function(){
     	var form = Ext.getCmp('belajar.form.UserForm');
