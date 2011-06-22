@@ -40,8 +40,28 @@ Ext.define('belajar.panel.UserManagementPanel', {
         ];
         
         this.tbar = {
-            xtype: 'belajar.toolbar.CrudToolbar'
+            xtype: 'belajar.toolbar.CrudToolbar', 
+            listeners: {
+            	scope: this, 
+            	onCrudToolbarAdd: this.newUser,
+            	onCrudToolbarEdit: this.editUser, 
+            	onCrudToolbarCancel: this.resetUserForm
+            }
         };
         belajar.panel.UserManagementPanel.superclass.initComponent.call(this);
+    }, 
+    
+    newUser: function(){
+    	Ext.getCmp('belajar.form.UserForm').getForm().reset();
+    	Ext.getCmp('belajar.form.UserForm').enableUserForm();
+    }, 
+    
+    editUser: function(){
+    	Ext.getCmp('belajar.form.UserForm').enableUserForm();
+    }, 
+    
+    resetUserForm: function(){
+    	Ext.getCmp('belajar.form.UserForm').getForm().reset();
+    	Ext.getCmp('belajar.form.UserForm').disableUserForm();
     }
 });
