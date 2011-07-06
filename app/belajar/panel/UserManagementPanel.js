@@ -27,6 +27,7 @@ Ext.define('belajar.panel.UserManagementPanel', {
             	scope: this, 
             	onCrudToolbarAdd: this.newUser,
             	onCrudToolbarEdit: this.editUser, 
+            	onCrudToolbarSave: this.saveUser,
             	onCrudToolbarCancel: this.resetUserForm
             }
         };
@@ -41,6 +42,10 @@ Ext.define('belajar.panel.UserManagementPanel', {
     editUser: function(){
     	Ext.getCmp('belajar.form.UserForm').enableUserForm();
     }, 
+    
+    saveUser: function(){
+    	Ext.getCmp('belajar.form.UserForm').simpanUser();
+    },
     
     resetUserForm: function(){
     	Ext.getCmp('belajar.form.UserForm').getForm().reset();
