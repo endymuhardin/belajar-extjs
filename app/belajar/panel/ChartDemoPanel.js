@@ -14,7 +14,7 @@ Ext.define('belajar.panel.ChartDemoPanel', {
             {no: '6', bulan: 'Jun', kecap: 65, permen: 50}
         ];
 
-        var ds = Ext.create('Ext.data.JsonStore', {
+        var localStore = Ext.create('Ext.data.JsonStore', {
             fields: [
                 {name: 'no', type: 'int'},
                 {name: 'bulan'},
@@ -24,11 +24,30 @@ Ext.define('belajar.panel.ChartDemoPanel', {
             data: myData
         });
 
+        var remoteStore = Ext.create('Ext.data.JsonStore', {
+            fields: [
+                {name: 'no', type: 'int'},
+                {name: 'bulan'},
+                {name: 'kecap', type: 'int'},
+                {name: 'permen', type: 'int'}
+            ],
+            proxy: {
+                type: 'ajax',
+                url: 'penjualan.php',
+                reader: {
+                    type: 'json',
+                    root: 'transaksi'
+                }
+            }
+        });
+
+        remoteStore.load();
+
         this.items = [
             {
                 region: 'center',
                 xtype: 'grid',
-                store: ds,
+                store: remoteStore,
                 columns: [
                     {
                         text: '#',
@@ -59,7 +78,7 @@ Ext.define('belajar.panel.ChartDemoPanel', {
                         xtype: 'chart',
                         animate: 'true',
                         shadow: 'true',
-                        store: ds,
+                        store: remoteStore,
                         legend: {position: 'right'},
                         series: [
                             {
@@ -78,7 +97,7 @@ Ext.define('belajar.panel.ChartDemoPanel', {
                                   renderer: function(storeItem, item) {
                                         //calculate percentage.
                                         var total = 0;
-                                        ds.each(function(rec) {
+                                        remoteStore.each(function(rec) {
                                             total += rec.get('permen');
                                         });
                                         this.setTitle(storeItem.get('bulan') + ': ' + storeItem.get('permen') + ' unit - ' + Math.round(storeItem.get('permen') / total * 100) + '%');
@@ -97,7 +116,7 @@ Ext.define('belajar.panel.ChartDemoPanel', {
                         region: 'center',
                         style: 'background:#fff',
                         animate: true,
-                        store: ds,
+                        store: remoteStore,
                         shadow: true,
                         legend: {
                             position: 'right'
