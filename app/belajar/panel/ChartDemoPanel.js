@@ -70,6 +70,24 @@ Ext.define('belajar.panel.ChartDemoPanel', {
                                     field: 'bulan',
                                     display: 'rotate',
                                     contrast: true
+                                },
+                                tips: {
+                                  trackMouse: true,
+                                  width: 140,
+                                  height: 28,
+                                  renderer: function(storeItem, item) {
+                                        //calculate percentage.
+                                        var total = 0;
+                                        ds.each(function(rec) {
+                                            total += rec.get('permen');
+                                        });
+                                        this.setTitle(storeItem.get('bulan') + ': ' + storeItem.get('permen') + ' unit - ' + Math.round(storeItem.get('permen') / total * 100) + '%');
+                                  }
+                                },
+                                highlight: {
+                                  segment: {
+                                    margin: 20
+                                  }
                                 }
                             }
                         ]
