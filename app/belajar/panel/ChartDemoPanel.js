@@ -46,15 +46,7 @@ Ext.define('belajar.panel.ChartDemoPanel', {
                     position: 'left',
                     fields: ['data'],
                     title: 'Jumlah Transaksi',
-                    minorTickSteps: 1,
-                    grid: {
-                        odd: {
-                            opacity: 1,
-                            fill: '#ddd',
-                            stroke: '#bbb',
-                            'stroke-width': 0.5
-                        }
-                    }
+                    minorTickSteps: 1
                 }, {
                     type: 'Category',
                     position: 'bottom',
