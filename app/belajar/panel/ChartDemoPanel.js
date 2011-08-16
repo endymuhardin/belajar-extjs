@@ -32,7 +32,22 @@ Ext.define('belajar.panel.ChartDemoPanel', {
         this.items = [
             {
                 region: 'center',
-                text: 'nanti gridnya di sini'
+                xtype: 'grid',
+                store: ds,
+                columns: [
+                    {
+                        text: 'Bulan',
+                        dataIndex: 'bulan'
+                    },
+                    {
+                        text: 'Penjualan Permen',
+                        dataIndex: 'permen'
+                    },
+                    {
+                        text: 'Penjualan Kecap',
+                        dataIndex: 'kecap'
+                    }
+                ]
             },
             {
                 region: 'south',
