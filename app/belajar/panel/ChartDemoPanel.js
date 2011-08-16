@@ -39,27 +39,29 @@ Ext.define('belajar.panel.ChartDemoPanel', {
             legend: {
                 position: 'right'
             },
-            axes: [{
-                type: 'Numeric',
-                minimum: 0,
-                position: 'left',
-                fields: ['data'],
-                title: 'Jumlah Transaksi',
-                minorTickSteps: 1,
-                grid: {
-                    odd: {
-                        opacity: 1,
-                        fill: '#ddd',
-                        stroke: '#bbb',
-                        'stroke-width': 0.5
+            axes: [
+                {
+                    type: 'Numeric',
+                    minimum: 0,
+                    position: 'left',
+                    fields: ['data'],
+                    title: 'Jumlah Transaksi',
+                    minorTickSteps: 1,
+                    grid: {
+                        odd: {
+                            opacity: 1,
+                            fill: '#ddd',
+                            stroke: '#bbb',
+                            'stroke-width': 0.5
+                        }
                     }
+                }, {
+                    type: 'Category',
+                    position: 'bottom',
+                    fields: ['bulan'],
+                    title: 'Bulan'
                 }
-            }, {
-                type: 'Category',
-                position: 'bottom',
-                fields: ['bulan'],
-                title: 'Bulan'
-            }],
+            ],
             series: [
                   {
                     type: 'line',
