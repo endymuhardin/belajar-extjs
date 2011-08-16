@@ -24,8 +24,8 @@ Ext.define('belajar.panel.ChartDemoPanel', {
             fields: [
                 {name: 'no', type: 'int'},
                 {name: 'bulan'},
-                {name: 'kecap'},
-                {name: 'permen'}
+                {name: 'kecap', type: 'int'},
+                {name: 'permen', type: 'int'}
             ],
             data: myData
         });
@@ -59,6 +59,27 @@ Ext.define('belajar.panel.ChartDemoPanel', {
                 height: '50%',
                 layout: 'border',
                 items : [
+                    {
+                        region: 'east',
+                        width: '50%',
+                        xtype: 'chart',
+                        animate: 'true',
+                        shadow: 'true',
+                        store: ds,
+                        legend: {position: 'right'},
+                        series: [
+                            {
+                                type: 'pie',
+                                field: 'permen',
+                                showInLegend: true,
+                                label: {
+                                    field: 'bulan',
+                                    display: 'rotate',
+                                    contrast: true
+                                }
+                            }
+                        ]
+                    },
                     {
                         xtype: 'chart',
                         region: 'center',
