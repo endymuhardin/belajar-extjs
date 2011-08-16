@@ -11,13 +11,7 @@ Ext.define('belajar.panel.ChartDemoPanel', {
             {no: '3', bulan: 'Mar', kecap: 20, permen: 60},
             {no: '4', bulan: 'Apr', kecap: 80, permen: 30},
             {no: '5', bulan: 'May', kecap: 55, permen: 80},
-            {no: '6', bulan: 'Jun', kecap: 65, permen: 50},
-            {no: '7', bulan: 'Jul', kecap: 77, permen: 40},
-            {no: '8', bulan: 'Aug', kecap: 36, permen: 70},
-            {no: '9', bulan: 'Sep', kecap: 85, permen: 20},
-            {no: '10', bulan: 'Oct', kecap: 100, permen: 10},
-            {no: '11', bulan: 'Nov', kecap: 20, permen: 70},
-            {no: '12', bulan: 'Dec', kecap: 10, permen: 30}
+            {no: '6', bulan: 'Jun', kecap: 65, permen: 50}
         ];
 
         var ds = Ext.create('Ext.data.JsonStore', {
