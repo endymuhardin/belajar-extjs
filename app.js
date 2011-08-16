@@ -7,6 +7,7 @@ Ext.Loader.setPath({
 Ext.require([
     'Ext.container.Viewport',
     'Ext.layout.container.Border',
+    'Ext.chart.Chart',
     'Ext.menu.Menu',
     'Ext.form.Label',
     'belajar.toolbar.CrudToolbar',
@@ -15,9 +16,12 @@ Ext.require([
     'belajar.form.RoleForm',
     'belajar.form.UserForm',
     'belajar.panel.UserManagementPanel',
+    'belajar.panel.ChartDemoPanel',
     'belajar.panel.CenterPanel',
     'belajar.panel.MainPanel'
 ]);
+
+Ext.require('Ext.chart.*');
 
 // Application's initialization
 Ext.onReady(function() {
@@ -32,3 +36,4 @@ Ext.onReady(function() {
     });
     win.show();
 });
+

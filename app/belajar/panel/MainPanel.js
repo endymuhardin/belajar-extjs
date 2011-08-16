@@ -3,7 +3,7 @@ Ext.define('belajar.panel.MainPanel', {
 	alias : 'widget.belajar.panel.MainPanel',
 	frame : true,
 	layout : 'border',
-	
+
 	initComponent : function() {
 		this.items = [ {
 			xtype : 'toolbar',
@@ -26,14 +26,14 @@ Ext.define('belajar.panel.MainPanel', {
 					xtype : 'menu',
 					plain : true,
 					items : [ {
-						text : 'User', 
+						text : 'User',
 						scope : this,
 						handler : function(item){
 							Ext.getCmp('centerpanel').displayScreen(item.screenType);
 						},
 						screenType : 'belajar.panel.UserManagementPanel'
 					}, {
-						text : 'Role', 
+						text : 'Role',
 						scope : this,
 						handler : function(item){
 							Ext.getCmp('centerpanel').displayScreen(item.screenType);
@@ -46,7 +46,21 @@ Ext.define('belajar.panel.MainPanel', {
 			}, {
 				text : 'Transaksi'
 			}, {
-				text : 'Report'
+				text : 'Report',
+				menu : {
+					xtype : 'menu',
+					plain : true,
+					items : [
+  					    {
+						    text : 'Chart',
+						    scope : this,
+						    handler : function(item){
+							    Ext.getCmp('centerpanel').displayScreen(item.screenType);
+						    },
+						    screenType : 'belajar.panel.ChartDemoPanel'
+					    }
+					]
+				}
 			} ]
 		}, {
 			xtype : 'panel',
@@ -66,10 +80,11 @@ Ext.define('belajar.panel.MainPanel', {
 			id : 'centerpanel',
 			xtype : 'belajar.panel.CenterPanel',
 			region : 'center'
-		} ] ; 
-		
+		} ] ;
+
     	belajar.panel.MainPanel.superclass.initComponent.call(this);
     }
 
-	
+
 });
+
