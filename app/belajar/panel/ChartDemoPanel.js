@@ -6,24 +6,25 @@ Ext.define('belajar.panel.ChartDemoPanel', {
     layout: 'border',
     initComponent: function() {
         var myData = [
-            {bulan: 'Jan', kecap: 10},
-            {bulan: 'Feb', kecap: 45},
-            {bulan: 'Mar', kecap: 20},
-            {bulan: 'Apr', kecap: 80},
-            {bulan: 'May', kecap: 55},
-            {bulan: 'Jun', kecap: 65},
-            {bulan: 'Jul', kecap: 77},
-            {bulan: 'Aug', kecap: 36},
-            {bulan: 'Sep', kecap: 85},
-            {bulan: 'Oct', kecap: 100},
-            {bulan: 'Nov', kecap: 20},
-            {bulan: 'Dec', kecap: 10}
+            {bulan: 'Jan', kecap: 10, permen: 40},
+            {bulan: 'Feb', kecap: 45, permen: 50},
+            {bulan: 'Mar', kecap: 20, permen: 60},
+            {bulan: 'Apr', kecap: 80, permen: 30},
+            {bulan: 'May', kecap: 55, permen: 80},
+            {bulan: 'Jun', kecap: 65, permen: 50},
+            {bulan: 'Jul', kecap: 77, permen: 40},
+            {bulan: 'Aug', kecap: 36, permen: 70},
+            {bulan: 'Sep', kecap: 85, permen: 20},
+            {bulan: 'Oct', kecap: 100, permen: 10},
+            {bulan: 'Nov', kecap: 20, permen: 70},
+            {bulan: 'Dec', kecap: 10, permen: 30}
         ];
 
         var ds = Ext.create('Ext.data.JsonStore', {
             fields: [
                 'bulan',
-                'kecap'
+                'kecap',
+                'permen'
             ],
             data: myData
         });
@@ -44,7 +45,7 @@ Ext.define('belajar.panel.ChartDemoPanel', {
                     type: 'Numeric',
                     minimum: 0,
                     position: 'left',
-                    fields: ['kecap'],
+                    fields: ['kecap', 'permen'],
                     title: 'Jumlah Transaksi',
                     minorTickSteps: 1
                 }, {
@@ -64,6 +65,16 @@ Ext.define('belajar.panel.ChartDemoPanel', {
                     axis: 'left',
                     xField: 'bulan',
                     yField: 'kecap'
+                },
+                {
+                    type: 'column',
+                    highlight: {
+                        size: 7,
+                        radius: 7
+                    },
+                    axis: 'left',
+                    xField: 'bulan',
+                    yField: 'permen'
                 }
             ]
         }
