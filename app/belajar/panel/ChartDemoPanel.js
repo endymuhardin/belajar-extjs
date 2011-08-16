@@ -63,13 +63,7 @@ Ext.define('belajar.panel.ChartDemoPanel', {
                     },
                     axis: 'left',
                     xField: 'bulan',
-                    yField: 'data',
-                    markerConfig: {
-                        type: 'cross',
-                        size: 4,
-                        radius: 4,
-                        'stroke-width': 0
-                    }
+                    yField: 'data'
                 }
             ]
         }
