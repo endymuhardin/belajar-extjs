@@ -31,53 +31,64 @@ Ext.define('belajar.panel.ChartDemoPanel', {
 
         this.items = [
             {
-            xtype: 'chart',
-            region: 'center',
-            style: 'background:#fff',
-            animate: true,
-            store: ds,
-            shadow: true,
-            legend: {
-                position: 'right'
+                region: 'center',
+                text: 'nanti gridnya di sini'
             },
-            axes: [
-                {
-                    type: 'Numeric',
-                    minimum: 0,
-                    position: 'left',
-                    fields: ['kecap', 'permen'],
-                    title: 'Jumlah Transaksi',
-                    minorTickSteps: 1
-                }, {
-                    type: 'Category',
-                    position: 'bottom',
-                    fields: ['bulan'],
-                    title: 'Bulan'
-                }
-            ],
-            series: [
-                  {
-                    type: 'line',
-                    highlight: {
-                        size: 7,
-                        radius: 7
-                    },
-                    axis: 'left',
-                    xField: 'bulan',
-                    yField: 'kecap'
-                },
-                {
-                    type: 'column',
-                    highlight: {
-                        size: 7,
-                        radius: 7
-                    },
-                    axis: 'left',
-                    xField: 'bulan',
-                    yField: 'permen'
-                }
-            ]
-        }
+            {
+                region: 'south',
+                height: '50%',
+                layout: 'border',
+                items : [
+                    {
+                        xtype: 'chart',
+                        region: 'center',
+                        style: 'background:#fff',
+                        animate: true,
+                        store: ds,
+                        shadow: true,
+                        legend: {
+                            position: 'right'
+                        },
+                        axes: [
+                            {
+                                type: 'Numeric',
+                                minimum: 0,
+                                position: 'left',
+                                fields: ['kecap', 'permen'],
+                                title: 'Jumlah Transaksi',
+                                minorTickSteps: 1
+                            }, {
+                                type: 'Category',
+                                position: 'bottom',
+                                fields: ['bulan'],
+                                title: 'Bulan'
+                            }
+                        ],
+                        series: [
+                              {
+                                type: 'line',
+                                highlight: {
+                                    size: 7,
+                                    radius: 7
+                                },
+                                axis: 'left',
+                                xField: 'bulan',
+                                yField: 'kecap'
+                            },
+                            {
+                                type: 'column',
+                                highlight: {
+                                    size: 7,
+                                    radius: 7
+                                },
+                                axis: 'left',
+                                xField: 'bulan',
+                                yField: 'permen'
+                            }
+                        ]
+                    }
+                ]
+            }
         ];
 
 
