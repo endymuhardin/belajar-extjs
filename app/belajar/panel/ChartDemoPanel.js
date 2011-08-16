@@ -6,24 +6,24 @@ Ext.define('belajar.panel.ChartDemoPanel', {
     layout: 'border',
     initComponent: function() {
         var myData = [
-            {bulan: 'Jan', data: 10},
-            {bulan: 'Feb', data: 45},
-            {bulan: 'Mar', data: 20},
-            {bulan: 'Apr', data: 80},
-            {bulan: 'May', data: 55},
-            {bulan: 'Jun', data: 65},
-            {bulan: 'Jul', data: 77},
-            {bulan: 'Aug', data: 36},
-            {bulan: 'Sep', data: 85},
-            {bulan: 'Oct', data: 100},
-            {bulan: 'Nov', data: 20},
-            {bulan: 'Dec', data: 10}
+            {bulan: 'Jan', kecap: 10},
+            {bulan: 'Feb', kecap: 45},
+            {bulan: 'Mar', kecap: 20},
+            {bulan: 'Apr', kecap: 80},
+            {bulan: 'May', kecap: 55},
+            {bulan: 'Jun', kecap: 65},
+            {bulan: 'Jul', kecap: 77},
+            {bulan: 'Aug', kecap: 36},
+            {bulan: 'Sep', kecap: 85},
+            {bulan: 'Oct', kecap: 100},
+            {bulan: 'Nov', kecap: 20},
+            {bulan: 'Dec', kecap: 10}
         ];
 
         var ds = Ext.create('Ext.data.JsonStore', {
             fields: [
                 'bulan',
-                'data'
+                'kecap'
             ],
             data: myData
         });
@@ -44,7 +44,7 @@ Ext.define('belajar.panel.ChartDemoPanel', {
                     type: 'Numeric',
                     minimum: 0,
                     position: 'left',
-                    fields: ['data'],
+                    fields: ['kecap'],
                     title: 'Jumlah Transaksi',
                     minorTickSteps: 1
                 }, {
@@ -63,7 +63,7 @@ Ext.define('belajar.panel.ChartDemoPanel', {
                     },
                     axis: 'left',
                     xField: 'bulan',
-                    yField: 'data'
+                    yField: 'kecap'
                 }
             ]
         }
